@@ -4,6 +4,7 @@ import { Router, Route, useNavigate, redirect } from "@solidjs/router";
 import "./index.css";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
+import Events from "./Events.jsx";
 import Members from "./Members.jsx";
 import Contact from "./Contact.jsx";
 
@@ -14,6 +15,7 @@ render(
     <Router>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/events" component={Events} />
       <Route path="/members" component={Members} />
       <Route path="/contact" component={Contact} />
       <Route
