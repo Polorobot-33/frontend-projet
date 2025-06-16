@@ -22,7 +22,7 @@ function Home() {
            Le Sel ça vient de la mer
           </p>
           <button
-            class="relative filter backdrop-blur-sm bg-white/30 hover:bg-white/40 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 mx-auto"
+            class="relative filter backdrop-blur-sm bg-white/10 [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)] hover:bg-white/40 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 mx-auto"
             
           >
             Bouton inutile
