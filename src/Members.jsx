@@ -40,7 +40,13 @@ const members_data = [
 function Member(data) {
   return (
     <div class="px-4 my-5 flex justify-center">
-      <div class="h-fit w-full max-w-2xl p-8 bg-white inline-flex overflow-x-scroll rounded-2xl">
+      
+      <div class="relative w-full max-w-2xl p-6 rounded-2xl overflow-hidden bg-transparent">
+        
+        <div class="absolute inset-0 backdrop-blur-xs [filter:url(#glass-distortion)] saturate-150 brightness-110"></div>
+        <div class="absolute inset-0 bg-white/10 dark:bg-black/10"></div>
+        <div class="absolute inset-0 [box-shadow:inset_1px_1px_2px_rgba(255,255,255,0.7)] dark:[box-shadow:inset_1px_1px_2px_rgba(255,255,255,0.15)]"></div>
+        <div class="relative z-10 flex items-center space-x-6 text-amber-50">
         <img src={data.data.photo} class="w-24 h-fit" />
         <div class="w-full pl-5">
           <div class="w-fit border-b-1 border-gray-400 pb-2 mb-2">
@@ -61,6 +67,7 @@ function Member(data) {
               </li>
             </Show>
           </ul>
+          </div>
         </div>
       </div>
     </div>
