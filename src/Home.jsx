@@ -1,4 +1,5 @@
 import Navbar from "./Navbar.jsx";
+import backgroundVideo from "./assets/bg-video.mp4"
 import { onMount } from "solid-js";
 
 function createRaindrop() {
