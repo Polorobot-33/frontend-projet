@@ -1,7 +1,10 @@
 import Navbar from "./Navbar.jsx";
 import backgroundVideo from "./assets/bg-video.mp4"
+import { createSignal } from 'solid-js'
 
 function Home() {
+  const [count, setCount] = createSignal(0)
+
   return (
     <div class="relative w-full h-screen overflow-hidden">
       <video
@@ -23,10 +26,13 @@ function Home() {
            Le Sel ça vient de la mer
           </p>
           <button
-            class="relative filter backdrop-blur-sm bg-white/10 [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)] hover:bg-white/40 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 mx-auto"
-            
+            class="relative filter backdrop-blur-sm bg-white/10 [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)] hover:bg-white/40 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 mx-auto inline-flex items-center"
+            onClick={() => setCount((count) => count + 1)}
           >
-            Bouton inutile
+            <span>Sel : {count()}</span>  
+            <span class="inline-flex items-center ml-1">
+              <img src='/src/assets/sel_civilization.jpg' class='h-[1em] inline-block'/>
+            </span>
           </button>
         </div>
       </div>
