@@ -1,12 +1,12 @@
 import Navbar from "./Navbar.jsx";
-import { onMount } from "solid-js";
+import backgroundVideo from "./assets/bg-video.mp4"
 
 function Home() {
   return (
     <div class="relative w-full h-screen overflow-hidden">
       <video
         class="absolute inset-0 w-full h-full object-cover -z-10"
-        src="/bg-video.mp4"
+        src={backgroundVideo}
         autoPlay
         muted
         loop
