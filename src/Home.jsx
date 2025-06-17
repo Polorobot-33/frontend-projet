@@ -17,7 +17,7 @@ function Home() {
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center space-y-6 px-4 max-w-lg">
           <h1 class="text-white text-5xl md:text-6xl font-bold">
-            Mine de Sel
+            Mines de Sel
           </h1>
           <p class="text-white text-lg md:text-xl">
            Le Sel ça vient de la mer
