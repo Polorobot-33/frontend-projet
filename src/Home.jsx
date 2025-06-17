@@ -24,7 +24,6 @@ function launchRaindrop() {
 }
 
 function Home() {
-  const [count, setCount] = createSignal(0)
 
   return (
     <div class="relative w-full h-screen overflow-hidden">

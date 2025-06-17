@@ -42,6 +42,7 @@ function Member(data) {
   return (
     <div class="my-5 mx-4 max-w-2xl flex justify-center snap-start scroll-mt-3">
       <div class="h-fit w-full p-7 bg-white rounded-2xl inline-flex overflow-x-scroll">
+        
         <img src={data.data.photo} class="w-24 h-fit rounded-xl visible:"/>
         <div class="w-full pl-5">
           <div class="w-fit border-b-1 border-gray-400 pb-2 mb-2">
