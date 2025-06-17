@@ -14,10 +14,10 @@ render(
   () => (
     <Router>
       <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/events" component={Events} />
-      <Route path="/members" component={Members} />
-      <Route path="/contact" component={Contact} />
+      <Route path="/About" component={About} />
+      <Route path="/Events" component={Events} />
+      <Route path="/Members" component={Members} />
+      <Route path="/Contact" component={Contact} />
       <Route
         path="/*"
         component={() => {
