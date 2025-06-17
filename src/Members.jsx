@@ -1,4 +1,5 @@
 import Navbar from "./Navbar.jsx";
+import { writeClipboard } from "@solid-primitives/clipboard";
 
 const members_data = [
   {
@@ -39,25 +40,25 @@ const members_data = [
 
 function Member(data) {
   return (
-    <div class="my-5 flex justify-center">
-      <div class="h-fit w-full max-w-2xl p-8 bg-white rounded-2xl inline-flex overflow-x-scroll">
-        <img src={data.data.photo} class="w-24 h-fit"/>
+    <div class="my-5 mx-4 max-w-2xl flex justify-center snap-start scroll-mt-3">
+      <div class="h-fit w-full p-7 bg-white rounded-2xl inline-flex overflow-x-scroll">
+        <img src={data.data.photo} class="w-24 h-fit rounded-xl visible:"/>
         <div class="w-full pl-5">
           <div class="w-fit border-b-1 border-gray-400 pb-2 mb-2">
             <p class="text-2xl">{data.data.name}</p>
-            <p class="text-md">{data.data.status}</p>
+            <p class="text-base">{data.data.status}</p>
           </div>
-          <ul class="flex flex-col text-nowrap">
+          <ul class="flex flex-col text-nowrap ">
             <Show when={data.data.phone}>
-              <li class="inline-flex items-center">
+              <li class="inline-flex items-center hover:text-lg duration-300 text-black hover:text-purple-800">
                 <i class="fa-solid fa-phone px-2"></i>
-                <p>{data.data.phone}</p>
+                <button onClick={() => (writeClipboard(data.data.phone))}>{data.data.phone}</button>
               </li>
             </Show>
             <Show when={data.data.mail}>
-              <li class="inline-flex items-center">
+              <li class="inline-flex items-center hover:text-lg duration-300 text-black hover:text-purple-800">
                 <i class="fa-solid fa-envelope px-2"></i>
-                <a href={"mailto:" + data.data.mail}>{data.data.mail}</a>
+                <a href={`mailto:${data.data.mail}`}>{data.data.mail}</a>
               </li>
             </Show>
           </ul>
@@ -70,8 +71,8 @@ function Member(data) {
 function Members() {
   return (
     <>
-      <div class="bg-[url(/src/assets/bg-park.jpg)] bg-cover bg-fixed w-full h-screen overflow-scroll">
-        <div class="my-3 sticky top-0">
+      <div class="bg-[url(/src/assets/bg-park.jpg)] bg-cover bg-fixed w-full h-screen overflow-scroll snap-y">
+        <div class="my-3 sticky top-0 snap-start scroll-mt-3">
           <Navbar />
         </div>
         <For each={members_data}>

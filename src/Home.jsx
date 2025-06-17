@@ -1,7 +1,6 @@
 import Navbar from "./Navbar.jsx";
 import backgroundVideo from "./assets/bg-video.mp4"
-
-import { onMount } from "solid-js";
+import { createSignal } from "solid-js"
 
 function createRaindrop() {
   const raindrop = document.createElement("div");
@@ -24,16 +23,10 @@ function launchRaindrop() {
   setTimeout(() => clearInterval(intervalId), 5000);
 }
 
-
-function test(){
-  alert("Ok"); 
-}
-
 function Home() {
   const [count, setCount] = createSignal(0)
 
   return (
-    
     <div class="relative w-full h-screen overflow-hidden">
       <style>
         {`
