@@ -39,8 +39,8 @@ const members_data = [
 
 function Member(data) {
   return (
-    <div class="px-4 my-5 flex justify-center">
-      <div class="h-fit w-full max-w-2xl p-8 bg-white inline-flex overflow-x-scroll">
+    <div class="my-5 flex justify-center">
+      <div class="h-fit w-full max-w-2xl p-8 bg-white rounded-2xl inline-flex overflow-x-scroll">
         <img src={data.data.photo} class="w-24 h-fit"/>
         <div class="w-full pl-5">
           <div class="w-fit border-b-1 border-gray-400 pb-2 mb-2">
@@ -71,7 +71,9 @@ function Members() {
   return (
     <>
       <div class="bg-[url(/src/assets/bg-park.jpg)] bg-cover bg-fixed w-full h-screen overflow-scroll">
-        <Navbar />
+        <div class="my-3 sticky top-0">
+          <Navbar />
+        </div>
         <For each={members_data}>
           {(elem, i) => <Member data={elem} />}
         </For>
