@@ -24,14 +24,7 @@ function launchRaindrop() {
   setTimeout(() => clearInterval(intervalId), 5000);
 }
 
-
-function test(){
-  alert("Ok"); 
-}
->>>>>>> 6e367e5872e09e8c4fcfe870a952426ce2e4b0df
-
 function Home() {
-  const [count, setCount] = createSignal(0)
 
   return (
     
