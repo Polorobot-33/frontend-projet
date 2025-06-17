@@ -1,6 +1,5 @@
 import { A } from "@solidjs/router";
 
-//<A activeClass="text-blue-900" end={_end} href={_href}>{_name}</A>
 import { createSignal } from "solid-js";
 
 export default function Navbar() {
@@ -27,7 +26,7 @@ export default function Navbar() {
           <ul class="flex justify-center gap-6">
             <li>
               <a
-                href="/Home"
+                href="/home"
                 onClick={() => setActive("Home")}
                 class={`text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 ${
                   active() === "Home" ? "bg-white/20" : "hover:bg-white/10"
@@ -38,7 +37,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/About"
+                href="/about"
                 onClick={() => setActive("About")}
                 class={`text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 ${
                   active() === "About" ? "bg-white/20" : "hover:bg-white/10"
@@ -49,7 +48,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/Members"
+                href="/members"
                 onClick={() => setActive("Members")}
                 class={`text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 ${
                   active() === "Members" ? "bg-white/20" : "hover:bg-white/10"
@@ -60,7 +59,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/Contact"
+                href="/contact"
                 onClick={() => setActive("Contact")}
                 class={`text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 ${
                   active() === "Contact" ? "bg-white/20" : "hover:bg-white/10"
