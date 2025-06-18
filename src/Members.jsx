@@ -72,14 +72,14 @@ function Member(data) {
 function Members() {
   return (
     <>
-      <div class="bg-[url(/src/assets/bg-park.jpg)] bg-cover bg-fixed w-full h-screen overflow-scroll snap-y">
-        <div class="my-3 sticky top-0 snap-start scroll-mt-3">
-          <Navbar />
-        </div>
+      
+        <div class="absolute bottom-8 left-0 w-full z-20">
+                <Navbar />
+              </div>
         <For each={members_data}>
           {(elem, i) => <Member data={elem} />}
         </For>
-      </div>
+      
     </>
   );
 }
