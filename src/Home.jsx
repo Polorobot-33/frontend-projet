@@ -1,8 +1,9 @@
 import Navbar from "./Navbar.jsx";
-import backgroundVideo from "./assets/bg-video.mp4"
+
 import { createSignal } from "solid-js"
 
 function createRaindrop() {
+  const boite = document.getElementById("boite");
   const raindrop = document.createElement("div");
   raindrop.classList.add("raindrop");
 
@@ -11,7 +12,7 @@ function createRaindrop() {
   const duration = Math.random() * 1 + 0.5;
   raindrop.style.animationDuration = duration + "s";
 
-  document.body.appendChild(raindrop);
+  boite.appendChild(raindrop);
 
   setTimeout(() => {
     raindrop.remove();
@@ -47,15 +48,10 @@ function Home() {
           }
         `}
       </style>
-      <video
-        class="absolute inset-0 w-full h-full object-cover -z-10"
-        src={backgroundVideo}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      />
+     <div
+        id="boite"
+        class="fixed inset-0 pointer-events-none overflow-hidden z-10"
+      ></div>
     <img
             src="./src/assets/minesdesel_blanc.png"
             alt="Mines de Sel Logo"

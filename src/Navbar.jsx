@@ -5,11 +5,11 @@ export default function Navbar() {
     <>
       <nav class="relative w-full max-w-lg mx-auto rounded-2xl overflow-hidden bg-transparent">
         {/* Glassmorphism*/}
-        <div class="absolute inset-0 rounded-2xl backdrop-blur-sm [filter:url(#glass-distortion)] saturate-150 brightness-110"></div>
-        <div class="absolute inset-0 rounded-2xl bg-white/10 dark:bg-gray-600/10"></div>
-        <div class="absolute inset-0 rounded-2xl [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"></div>
+        <div class="absolute inset-0 rounded-2xl backdrop-blur-sm [filter:url(#glass-distortion)] saturate-150 brightness-110  bg-white/10 dark:bg-gray-600/10 "></div>
+        
+        <div class="absolute inset-0 rounded-2xl  [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"></div>
 
-        {/* Nav content */}
+        
         <div class="relative z-10 p-4">
           <ul class="flex justify-center gap-6">
             <li>
