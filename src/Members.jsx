@@ -40,10 +40,9 @@ const members_data = [
 
 function Member(data) {
   return (
-    <div class="my-5 mx-4 max-w-2xl flex justify-center snap-start scroll-mt-3">
-      <div class="h-fit w-full p-7 bg-white rounded-2xl inline-flex overflow-x-scroll">
-        
-        <img src={data.data.photo} class="w-24 h-fit rounded-xl visible:"/>
+    <div class="m-5 flex justify-center items-center">
+      <div class="p-7 bg-white rounded-2xl flex overflow-x-scroll">
+        <img src={data.data.photo} class="w-24 h-fit rounded-xl" />
         <div class="w-full pl-5">
           <div class="w-fit border-b-1 border-gray-400 pb-2 mb-2">
             <p class="text-2xl">{data.data.name}</p>
@@ -53,7 +52,9 @@ function Member(data) {
             <Show when={data.data.phone}>
               <li class="inline-flex items-center hover:text-lg duration-300 text-black hover:text-purple-800">
                 <i class="fa-solid fa-phone px-2"></i>
-                <button onClick={() => (writeClipboard(data.data.phone))}>{data.data.phone}</button>
+                <button onClick={() => writeClipboard(data.data.phone)}>
+                  {data.data.phone}
+                </button>
               </li>
             </Show>
             <Show when={data.data.mail}>
@@ -72,14 +73,12 @@ function Member(data) {
 function Members() {
   return (
     <>
-      
-        <div class="absolute bottom-8 left-0 w-full z-20">
-                <Navbar />
-              </div>
-        <For each={members_data}>
-          {(elem, i) => <Member data={elem} />}
-        </For>
-      
+    <div class="h-screen">
+      <div class="flex flex-wrap justify-around overflow-scroll h-5/6">
+        <For each={members_data}>{(elem, i) => <Member data={elem} />}</For>
+      </div>
+      </div>
+      <Navbar />
     </>
   );
 }

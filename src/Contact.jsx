@@ -1,19 +1,47 @@
 import Navbar from "./Navbar.jsx";
+import { createSignal, Show } from "solid-js";
+
+const [message, setMessage] = createSignal("");
+const [answer, setAnswer] = createSignal("");
+
+function sendMessage() {
+  if (message() == "") {
+    setAnswer("Your message is empty !");
+   } else {
+    setAnswer("Message recieved with success !");
+  }
+  setTimeout(() => setAnswer(""), 3000);
+  setMessage("");
+}
 
 function Contact() {
   return (
     <>
-      <div class="bg-[url(/src/assets/bg-sea.jpg)] bg-cover bg-fixed w-full h-screen overflow-scroll">
-        <Navbar />
-        <div class="grid grid-rows-5 gap-x-2 content-center text-center m-8">
-          <div class="bg-amber-300 rounded-2xl row-start-1 flex flex-col justify-center">
-            <h>Nous contacter</h>
+      <Navbar />
+      <div class="h-screen">
+        <div class="flex flex-col items-center h-full">
+          <div class="text-center text-white m-10">
+            <h1 class="text-5xl font-bold m-5">Feeling salty ?</h1>
+            <p class="text-lg">Send us a message !</p>
           </div>
-          <div class="bg-white border-amber-300 border-2 row-start-3 rounded-2xl h-20 flex justify-center p-2">
-            <input class="w-full text-center" type="text" placeholder="type your message here"></input>
+          <div class="w-3/4 h-9/20 flex justify-center items-center">
+            <textarea
+              class="w-full h-full border p-2 rounded bg-white"
+              placeholder="type your message here"
+              value={message()}
+              onInput={(e) => setMessage(e.target.value)}
+            ></textarea>
           </div>
-          <div class="bg-white hover:bg-gray-700 row-start-5 rounded-2xl flex flex-col justify-center">
-            <button>Envoyer le message</button>
+          <div class=" m-10 flex flex-col justify-center items-center">
+            <button
+              class="bg-white px-10 py-1 w-fit border-black border-1 hover:bg-gray-200 rounded-md mb-2"
+              onClick={sendMessage}
+            >
+              Send
+            </button>
+            <Show when={answer() != ""}>
+              <p class="text-white">{answer()}</p>
+            </Show>
           </div>
         </div>
       </div>
