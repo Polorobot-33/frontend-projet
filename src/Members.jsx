@@ -18,13 +18,13 @@ const members_data = [
   },
   {
     name: "Lucas DUHAUTOIS",
-    photo: "./src/assets/24duhautoi.jpg",
+    photo: "./assets/24duhautoi.jpg",
     status: "Treasurer",
     mail: "lucas.duhautois@etu.minesparis.psl.eu",
   },
   {
     name: "Pierre-Louis COPPENS",
-    photo: "./src/assets/24coppens.jpg",
+    photo: "./assets/24coppens.jpg",
     status: "Head of events",
     phone: "+33 6 11 22 33 44",
     mail: "pierre-louis.coppens@etu.minesparis.psl.eu",
