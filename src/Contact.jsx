@@ -6,7 +6,7 @@ const [answer, setAnswer] = createSignal("");
 
 async function sendMessage() {
   if (message() == "") {
-    setAnswer("Your message is empty !");
+    setAnswer("Votre message est vide !");
    } else {
 
     //On simule l'envoi d'un message 
@@ -24,7 +24,7 @@ async function sendMessage() {
     // const data = await res.json();
     // setAnswer(data.message);
     
-    setAnswer("Message recieved with success !");
+    setAnswer("Votre message a été envoyé !");
   }
   setTimeout(() => setAnswer(""), 3000);
   setMessage("");
@@ -37,13 +37,13 @@ function Contact() {
       <div class="h-screen">
         <div class="flex h-full flex-col items-center">
           <div class="m-10 text-center text-white">
-            <h1 class="m-5 text-5xl font-bold">Feeling salty ?</h1>
-            <p class="text-lg">Send us a message !</p>
+            <h1 class="m-5 text-5xl font-bold">Envie de répandre votre sel ?</h1>
+            <p class="text-lg">Envoyez nous un message !</p>
           </div>
           <div class="flex h-9/20 w-3/4 items-center justify-center">
             <textarea
               class="h-full w-full rounded border bg-white p-2"
-              placeholder="type your message here"
+              placeholder="écrivez votre message ici"
               value={message()}
               onInput={(e) => setMessage(e.target.value)}
             ></textarea>

@@ -1,5 +1,10 @@
 import { A } from "@solidjs/router";
 
+const activeStyle =
+  "text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 bg-white/20";
+const inactiveStyle =
+  "text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-white/10";
+
 export default function Navbar() {
   return (
     <>
@@ -11,42 +16,42 @@ export default function Navbar() {
           <div class="absolute inset-0 rounded-2xl [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"></div>
 
           <div class="relative z-10 p-4">
-            <ul class="flex justify-center gap-6">
+            <ul class="flex justify-center gap-2">
               <li>
                 <A
                   href="/"
                   end={true}
-                  activeClass=" text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 bg-white/20"
-                  inactiveClass="text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-white/10"
+                  activeClass={activeStyle}
+                  inactiveClass={inactiveStyle}
                 >
-                  Home
+                  Accueil
                 </A>
               </li>
               <li>
                 <A
                   href="/About"
-                  activeClass=" text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 bg-white/20"
-                  inactiveClass="text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-white/10"
+                  activeClass={activeStyle}
+                  inactiveClass={inactiveStyle}
                 >
-                  About
+                  Notre mission
                 </A>
               </li>
               <li>
                 <A
                   href="/Members"
-                  activeClass=" text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 bg-white/20"
-                  inactiveClass="text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-white/10"
+                  activeClass={activeStyle}
+                  inactiveClass={inactiveStyle}
                 >
-                  Members
+                  Membres
                 </A>
               </li>
               <li>
                 <A
                   href="/Contact"
-                  activeClass=" text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 bg-white/20"
-                  inactiveClass="text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-white/10"
+                  activeClass="text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 bg-white/20"
+                  inactiveClass={inactiveStyle}
                 >
-                  Contact
+                  Nous contacter
                 </A>
               </li>
             </ul>
