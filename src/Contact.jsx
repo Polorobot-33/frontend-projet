@@ -4,10 +4,26 @@ import { createSignal, Show } from "solid-js";
 const [message, setMessage] = createSignal("");
 const [answer, setAnswer] = createSignal("");
 
-function sendMessage() {
+async function sendMessage() {
   if (message() == "") {
     setAnswer("Your message is empty !");
-  } else {
+   } else {
+
+    //On simule l'envoi d'un message 
+
+    // const res = await fetch("/api/contact", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     message: message(),
+    //   }),
+    // });
+
+    // const data = await res.json();
+    // setAnswer(data.message);
+    
     setAnswer("Message recieved with success !");
   }
   setTimeout(() => setAnswer(""), 3000);
