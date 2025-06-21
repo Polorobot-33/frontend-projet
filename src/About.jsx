@@ -4,7 +4,7 @@ function About() {
   return (
     <>
       <img
-        src="./src/assets/minesdesel_blanc.png"
+        src="./minesdesel_blanc.png"
         alt="Mines de Sel Logo"
         class="mx-auto mb-4 w-100 h-100 object-contain drop-shadow-lg select-none pointer-events-none opacity-80"
       />
