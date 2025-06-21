@@ -26,7 +26,7 @@ function launchRaindrop() {
 
 function Home() {
   return (
-    <div class="relative w-full h-screen overflow-hidden">
+    <div class="relative h-screen w-full overflow-hidden">
       <style>
         {`
           .raindrop {
@@ -49,23 +49,23 @@ function Home() {
       </style>
       <div
         id="boite"
-        class="fixed inset-0 pointer-events-none overflow-hidden z-10"
+        class="pointer-events-none fixed inset-0 z-10 overflow-hidden"
       ></div>
       <img
         src="./minesdesel_blanc.png"
         alt="Mines de Sel Logo"
-        class="mx-auto mb-4 w-100 h-100 object-contain drop-shadow-lg select-none pointer-events-none opacity-80"
+        class="pointer-events-none mx-auto mb-4 h-100 w-100 object-contain opacity-80 drop-shadow-lg select-none"
       />
       <div class="absolute inset-0 flex items-center justify-center">
-        <div class="text-center space-y-6 px-4 max-w-lg">
-          <h1 class="text-white text-5xl md:text-6xl font-bold">
+        <div class="max-w-lg space-y-6 px-4 text-center">
+          <h1 class="text-5xl font-bold text-white md:text-6xl">
             Mines de Sel
           </h1>
-          <p class="text-white text-lg md:text-xxl">
+          <p class="md:text-xxl text-lg text-white">
             « Le sucre ne sert à rien quand c'est le sel qui manque.»
           </p>
           <button
-            class="relative filter backdrop-blur-sm bg-white/10 [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)] hover:bg-white/40 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 mx-auto"
+            class="relative mx-auto rounded-lg bg-white/10 px-6 py-3 font-semibold text-white [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] filter backdrop-blur-sm transition duration-300 hover:bg-white/40 dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"
             onClick={launchRaindrop}
           >
             Saler la page

@@ -7,7 +7,7 @@ const [answer, setAnswer] = createSignal("");
 function sendMessage() {
   if (message() == "") {
     setAnswer("Your message is empty !");
-   } else {
+  } else {
     setAnswer("Message recieved with success !");
   }
   setTimeout(() => setAnswer(""), 3000);
@@ -19,22 +19,22 @@ function Contact() {
     <>
       <Navbar />
       <div class="h-screen">
-        <div class="flex flex-col items-center h-full">
-          <div class="text-center text-white m-10">
-            <h1 class="text-5xl font-bold m-5">Feeling salty ?</h1>
+        <div class="flex h-full flex-col items-center">
+          <div class="m-10 text-center text-white">
+            <h1 class="m-5 text-5xl font-bold">Feeling salty ?</h1>
             <p class="text-lg">Send us a message !</p>
           </div>
-          <div class="w-3/4 h-9/20 flex justify-center items-center">
+          <div class="flex h-9/20 w-3/4 items-center justify-center">
             <textarea
-              class="w-full h-full border p-2 rounded bg-white"
+              class="h-full w-full rounded border bg-white p-2"
               placeholder="type your message here"
               value={message()}
               onInput={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
-          <div class=" m-10 flex flex-col justify-center items-center">
+          <div class="m-10 flex flex-col items-center justify-center">
             <button
-              class="bg-white px-10 py-1 w-fit border-black border-1 hover:bg-gray-200 rounded-md mb-2"
+              class="mb-2 w-fit rounded-md border-1 border-black bg-white px-10 py-1 hover:bg-gray-200"
               onClick={sendMessage}
             >
               Send
