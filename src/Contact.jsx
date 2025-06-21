@@ -53,7 +53,7 @@ function Contact() {
               class="mb-2 w-fit rounded-md border-1 border-black bg-white px-10 py-1 hover:bg-gray-200"
               onClick={sendMessage}
             >
-              Send
+              Envoyer
             </button>
             <Show when={answer() != ""}>
               <p class="text-white">{answer()}</p>
