@@ -41,7 +41,7 @@ const members_data = [
 function Member(data) {
   return (
     <div class="m-5 flex items-center justify-center">
-      <div class="flex overflow-x-scroll rounded-2xl bg-white p-7">
+      <div class="flex rounded-2xl bg-white p-7">
         <img src={data.data.photo} class="h-fit w-24 rounded-xl" />
         <div class="w-full pl-5">
           <div class="mb-2 w-fit border-b-1 border-gray-400 pb-2">
@@ -74,7 +74,10 @@ function Members() {
   return (
     <>
       <div class="h-screen">
-        <div class="flex h-5/6 flex-wrap justify-around overflow-scroll">
+        <h1 class="p-4 text-center text-3xl font-bold text-white">
+          Voici nos membres les plus illustres
+        </h1>
+        <div class="flex h-5/6 flex-col justify-around overflow-scroll">
           <For each={members_data}>{(elem, i) => <Member data={elem} />}</For>
         </div>
       </div>

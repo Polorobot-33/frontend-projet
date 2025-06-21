@@ -7,9 +7,8 @@ const [answer, setAnswer] = createSignal("");
 async function sendMessage() {
   if (message() == "") {
     setAnswer("Votre message est vide !");
-   } else {
-
-    //On simule l'envoi d'un message 
+  } else {
+    //On simule l'envoi d'un message
 
     // const res = await fetch("/api/contact", {
     //   method: "POST",
@@ -23,7 +22,7 @@ async function sendMessage() {
 
     // const data = await res.json();
     // setAnswer(data.message);
-    
+
     setAnswer("Votre message a été envoyé !");
   }
   setTimeout(() => setAnswer(""), 3000);
@@ -37,10 +36,12 @@ function Contact() {
       <div class="h-screen">
         <div class="flex h-full flex-col items-center">
           <div class="m-10 text-center text-white">
-            <h1 class="m-5 text-5xl font-bold">Envie de répandre votre sel ?</h1>
+            <h1 class="m-5 text-3xl font-bold">
+              Envie de répandre votre sel ?
+            </h1>
             <p class="text-lg">Envoyez nous un message !</p>
           </div>
-          <div class="flex h-9/20 w-3/4 items-center justify-center">
+          <div class="flex h-9/20 w-3/5 items-center justify-center">
             <textarea
               class="h-full w-full rounded border bg-white p-2"
               placeholder="écrivez votre message ici"

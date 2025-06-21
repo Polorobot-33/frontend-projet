@@ -1,7 +1,5 @@
 import Navbar from "./Navbar.jsx";
 
-import { createSignal } from "solid-js";
-
 function createRaindrop() {
   const boite = document.getElementById("boite");
   const raindrop = document.createElement("div");
@@ -58,10 +56,10 @@ function Home() {
       />
       <div class="absolute inset-0 flex items-center justify-center">
         <div class="max-w-lg space-y-6 px-4 text-center">
-          <h1 class="text-5xl font-bold text-white md:text-6xl">
+          <h1 class="text-5xl font-bold text-white">
             Mines de Sel
           </h1>
-          <p class="md:text-xxl text-lg text-white">
+          <p class="text-lg text-white">
             « Le sucre ne sert à rien quand c'est le sel qui manque.»
           </p>
           <button
