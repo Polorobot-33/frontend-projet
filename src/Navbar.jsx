@@ -6,9 +6,9 @@ export default function Navbar() {
       <div class="absolute bottom-8 left-0 z-20 w-full">
         <nav class="relative mx-auto w-full max-w-lg overflow-hidden rounded-2xl bg-transparent">
           {/* Glassmorphism*/}
-          <div class="absolute inset-0 rounded-2xl backdrop-blur-sm [filter:url(#glass-distortion)] saturate-150 brightness-110  "></div>
-          
-          <div class="absolute inset-0 rounded-2xl  [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"></div>
+          <div class="absolute inset-0 rounded-2xl brightness-110 saturate-150 [filter:url(#glass-distortion)] backdrop-blur-sm"></div>
+
+          <div class="absolute inset-0 rounded-2xl [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"></div>
 
           <div class="relative z-10 p-4">
             <ul class="flex justify-center gap-6">
