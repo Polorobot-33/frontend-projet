@@ -16,7 +16,7 @@ export default function Navbar() {
           <div class="absolute inset-0 rounded-2xl [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"></div>
 
           <div class="relative z-10 p-4">
-            <ul class="flex justify-center gap-2">
+            <ul class="flex justify-around">
               <li>
                 <A
                   href="/"
@@ -33,7 +33,7 @@ export default function Navbar() {
                   activeClass={activeStyle}
                   inactiveClass={inactiveStyle}
                 >
-                  Notre mission
+                  À propos
                 </A>
               </li>
               <li>
@@ -51,7 +51,7 @@ export default function Navbar() {
                   activeClass="text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 bg-white/20"
                   inactiveClass={inactiveStyle}
                 >
-                  Nous contacter
+                  Contacts
                 </A>
               </li>
             </ul>

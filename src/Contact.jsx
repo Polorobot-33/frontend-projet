@@ -51,7 +51,7 @@ function Contact() {
           </div>
           <div class="m-10 flex flex-col items-center justify-center">
             <button
-              class="mb-2 w-fit rounded-md border-1 border-black bg-white px-10 py-1 hover:bg-gray-200"
+              class="relative mx-auto rounded-lg bg-white/10 px-6 py-3 font-semibold text-white [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] filter backdrop-blur-sm transition duration-300 hover:bg-white/40 dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"
               onClick={sendMessage}
             >
               Envoyer
