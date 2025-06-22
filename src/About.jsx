@@ -19,7 +19,7 @@ function About() {
           monde entier.
           <br/>
           P.S. Oui 3 milliard d'arbres sont brulés à chaque fois que ce fond
-          d'écran de 60Mo est chargé
+          d'écran de 98Mo est chargé
         </p>
       </div>
 
