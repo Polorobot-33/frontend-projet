@@ -1,43 +1,6 @@
 import Navbar from "./Navbar.jsx";
 import { writeClipboard } from "@solid-primitives/clipboard";
-
-// data of the members (this would normaly be stored in a database, but for educational purpose, it is stored in the static website)
-const members_data = [
-  {
-    name: "Mikhail KATAEVSKII",
-    photo: "./24kataevsk.jpg",
-    status: "President",
-    phone: "+33 7 12 34 56 78",
-    mail: "mikhail.kataevskii@etu.minesparis.psl.eu",
-  },
-  {
-    name: "Laurentin-Wilhelm AHREND",
-    photo: "./24ahrend.jpg",
-    status: "Vice-president",
-    phone: "+33 7 13 57 92 46",
-    mail: "laurentin-wilhelm.ahrend@etu.minesparis.psl.eu",
-  },
-  {
-    name: "Lucas DUHAUTOIS",
-    photo: "./24duhautoi.jpg",
-    status: "Treasurer",
-    mail: "lucas.duhautois@etu.minesparis.psl.eu",
-  },
-  {
-    name: "Pierre-Louis COPPENS",
-    photo: "./24coppens.jpg",
-    status: "Head of events",
-    phone: "+33 6 11 22 33 44",
-    mail: "pierre-louis.coppens@etu.minesparis.psl.eu",
-  },
-  {
-    name: "Paul FRAENKEL",
-    photo: "./24fraenkel.jpg",
-    status: "Head of partners",
-    phone: "+33 6 44 33 22 11",
-    mail: "paul.fraenkel@etu.minesparis.psl.eu",
-  },
-];
+import members_data from "./assets/members_data.json";
 
 //Solid Element for displaying the informations of one member
 //data : Member information, given in the format above : 
