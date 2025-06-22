@@ -43,7 +43,7 @@ function Contact() {
           </div>
           <div class="flex h-9/20 w-3/5 items-center justify-center">
             <textarea
-              class="h-full w-full rounded border bg-white p-2"
+              class="h-5/6 w-full resize-none rounded-xl border border-white/20 bg-white/10 p-3 text-base text-white placeholder-white/60 transition-all duration-300 focus:border-white/75 focus:bg-white/30 focus:outline-none dark:border-white/10 dark:bg-black/20 dark:focus:bg-black/30"
               placeholder="écrivez votre message ici"
               value={message()}
               onInput={(e) => setMessage(e.target.value)}
@@ -57,7 +57,7 @@ function Contact() {
               Envoyer
             </button>
             <Show when={answer() != ""}>
-              <p class="text-white">{answer()}</p>
+              <p class="m-5 text-white">{answer()}</p>
             </Show>
           </div>
         </div>

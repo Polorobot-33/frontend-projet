@@ -13,7 +13,7 @@ import members_data from "./assets/members_data.json";
 function Member(data) {
   return (
     <div class="m-5 min-w-fit w-2xl inline-flex justify-center snap-start">
-      <div class="flex rounded-2xl bg-white p-7">
+      <div class="mt-4 flex overflow-hidden rounded-2xl p-4 text-center text-sm text-white [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] brightness-110 saturate-100 backdrop-blur-sm dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]">
         {/* Picture */}
         <img src={data.data.photo} class="h-fit w-24 rounded-xl" />
         <div class="w-full pl-5">
@@ -61,7 +61,7 @@ function Members() {
         </h1>
 
         {/* Display all the members using a for loop */}
-        <div class="flex h-5/6 w-full flex-col justify-around items-center overflow-scroll snap-y">
+        <div class="flex h-3/4 w-full flex-col justify-around items-center overflow-scroll snap-y">
           <For each={members_data}>{(elem, i) => <Member data={elem} />}</For>
         </div>
       </div>
