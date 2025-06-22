@@ -15,14 +15,16 @@ function Raindrop() {
 /* Crée une goutte de pluie sur la page, puis la supprime */
 function createRaindrop() {
   const container = document.getElementById("container");
-  // We need an extra container because dispose() revomes all the contents inside a container.
-  const dropletContainer = document.createElement("div");
-  container.appendChild(dropletContainer);
-  const dispose = render(() => <Raindrop />, dropletContainer);
-  setTimeout(() => {
-    dispose();
-    container.removeChild(dropletContainer);
-  }, 2000);
+  if (container != null) {
+    // We need an extra container because dispose() revomes all the contents inside a container.
+    const dropletContainer = document.createElement("div");
+    container.appendChild(dropletContainer);
+    const dispose = render(() => <Raindrop />, dropletContainer);
+    setTimeout(() => {
+      dispose();
+      container.removeChild(dropletContainer);
+    }, 2000);
+  }
 }
 
 /* Lance la pluie de sel */
