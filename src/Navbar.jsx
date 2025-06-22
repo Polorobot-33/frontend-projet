@@ -49,7 +49,7 @@ export default function Navbar() {
               <li>
                 <A
                   href="/Contact"
-                  activeClass="text-white font-medium text-base px-4 py-2 rounded-lg transition-colors duration-200 bg-white/20"
+                  activeClass={activeStyle}
                   inactiveClass={inactiveStyle}
                 >
                   Contacts
