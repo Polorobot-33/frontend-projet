@@ -42,7 +42,7 @@ function Member(data) {
   return (
     <div class="m-5 flex justify-center items-center">
       <div class="p-7 bg-white rounded-2xl flex overflow-x-scroll">
-        <img src={data.data.photo} class="w-24 h-fit rounded-xl" />
+        <img src={data.data.photo} class="w-24 h-fit rounded-md" />
         <div class="w-full pl-5">
           <div class="w-fit border-b-1 border-gray-400 pb-2 mb-2">
             <p class="text-2xl">{data.data.name}</p>
