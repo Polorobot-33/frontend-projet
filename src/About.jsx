@@ -20,6 +20,7 @@ function About() {
            les mineurs les plus aigris de la promo. Nous avons même essayé de reproduire le 
            liquid glass d’Apple dans un but satirique, mais le résultat est un site très lent à charger, 
            aux visuels médiocres, et aussi responsive que Basile Marchand quand il n’a pas bu de café.
+           C'est énervant, pas vrai le texte qui contraste pas assez avec le fond ??
             <br />
             <br />
             P.S. Oui 3 milliard d'arbres sont brulés à chaque fois que ce fond
