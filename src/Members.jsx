@@ -3,7 +3,7 @@ import { writeClipboard } from "@solid-primitives/clipboard";
 import members_data from "./assets/members_data.json";
 
 //Solid Element for displaying the informations of one member
-//data : Member information, given in the format above : 
+//data : Member information, given in the format of members_data.json : 
 //  name : String
 //  status : String
 //  photo : String, relative uri of the picture
@@ -12,7 +12,7 @@ import members_data from "./assets/members_data.json";
 
 function Member(data) {
   return (
-    <div class="m-5 min-w-fit w-2xl inline-flex justify-center">
+    <div class="m-5 min-w-fit w-2xl inline-flex justify-center snap-start">
       <div class="flex rounded-2xl bg-white p-7">
         {/* Picture */}
         <img src={data.data.photo} class="h-fit w-24 rounded-xl" />
@@ -61,7 +61,7 @@ function Members() {
         </h1>
 
         {/* Display all the members using a for loop */}
-        <div class="flex h-5/6 w-full flex-col justify-around overflow-scroll">
+        <div class="flex h-5/6 w-full flex-col justify-around items-center overflow-scroll snap-y">
           <For each={members_data}>{(elem, i) => <Member data={elem} />}</For>
         </div>
       </div>
