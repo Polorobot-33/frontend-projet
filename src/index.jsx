@@ -14,7 +14,7 @@ render(
   () => (
     <>
       <video
-        class="absolute inset-0 w-full h-full object-cover -z-10"
+        class="absolute inset-0 -z-10 h-full w-full object-cover"
         src={backgroundVideo}
         autoPlay
         muted
@@ -39,5 +39,5 @@ render(
       </Router>
     </>
   ),
-  root
+  root,
 );

@@ -40,17 +40,17 @@ const members_data = [
 
 function Member(data) {
   return (
-    <div class="m-5 flex justify-center items-center">
-      <div class="p-7 bg-white rounded-2xl flex overflow-x-scroll">
-        <img src={data.data.photo} class="w-24 h-fit rounded-md" />
+    <div class="m-5 flex items-center justify-center">
+      <div class="flex rounded-2xl bg-white p-7">
+        <img src={data.data.photo} class="h-fit w-24 rounded-xl" />
         <div class="w-full pl-5">
-          <div class="w-fit border-b-1 border-gray-400 pb-2 mb-2">
+          <div class="mb-2 w-fit border-b-1 border-gray-400 pb-2">
             <p class="text-2xl">{data.data.name}</p>
             <p class="text-base">{data.data.status}</p>
           </div>
-          <ul class="flex flex-col text-nowrap ">
+          <ul class="flex flex-col text-nowrap">
             <Show when={data.data.phone}>
-              <li class="inline-flex items-center hover:text-lg duration-300 text-black hover:text-purple-800">
+              <li class="inline-flex items-center text-black duration-300 hover:text-lg hover:text-purple-800">
                 <i class="fa-solid fa-phone px-2"></i>
                 <button onClick={() => writeClipboard(data.data.phone)}>
                   {data.data.phone}
@@ -58,7 +58,7 @@ function Member(data) {
               </li>
             </Show>
             <Show when={data.data.mail}>
-              <li class="inline-flex items-center hover:text-lg duration-300 text-black hover:text-purple-800">
+              <li class="inline-flex items-center text-black duration-300 hover:text-lg hover:text-purple-800">
                 <i class="fa-solid fa-envelope px-2"></i>
                 <a href={`mailto:${data.data.mail}`}>{data.data.mail}</a>
               </li>
@@ -73,10 +73,13 @@ function Member(data) {
 function Members() {
   return (
     <>
-    <div class="h-screen">
-      <div class="flex flex-wrap justify-around overflow-scroll h-5/6">
-        <For each={members_data}>{(elem, i) => <Member data={elem} />}</For>
-      </div>
+      <div class="h-screen">
+        <h1 class="p-4 text-center text-3xl font-bold text-white">
+          Voici nos membres les plus illustres
+        </h1>
+        <div class="flex h-5/6 flex-col justify-around overflow-scroll">
+          <For each={members_data}>{(elem, i) => <Member data={elem} />}</For>
+        </div>
       </div>
       <Navbar />
     </>
