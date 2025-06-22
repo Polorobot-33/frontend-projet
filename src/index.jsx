@@ -12,6 +12,7 @@ const root = document.getElementById("root");
 render(
   () => (
     <>
+      {/* Met la vidéo en fond d'écran pour toutes les pages */}
       <video
         class="absolute inset-0 -z-10 h-full w-full object-cover"
         src={backgroundVideo}
@@ -22,6 +23,7 @@ render(
         preload="auto"
       />
       <Router>
+        {/* Définit les routes vers les différentes pages */}
         <Route path="/" component={Home} />
         <Route path="/About" component={About} />
         <Route path="/Members" component={Members} />

@@ -5,15 +5,18 @@ function About() {
   return (
     <>
       <div class="flex flex-col items-center">
+        {/* Logo de l'association */}
         <img
           src={logo}
           alt="Mines de Sel Logo"
           class="m-8 w-80 opacity-80 drop-shadow-lg"
         />
         <div class="flex flex-col items-center">
+          {/* Nom de l'association */}
           <div class="max-w-lg space-y-6 px-4 text-center">
             <h1 class="text-5xl font-bold text-white">Mines de Sel</h1>
           </div>
+          {/* Description de l'association */}
           <p class="relative mx-auto mt-4 w-[90vw] max-w-[400px] overflow-hidden rounded-2xl p-4 text-center text-sm text-white [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] brightness-110 saturate-150 backdrop-blur-sm dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]">
            Notre mission est de répandre le plus de sel possible à travers le monde entier. 
            Nos raisons sont nombreuses et jamais légitimes, mais vous avez en face de vous 
@@ -31,7 +34,7 @@ function About() {
         </div>
       </div>
 
-      {/* Navbar */}
+      {/* Menu de navigation entre les pages */}
       <Navbar />
     </>
   );
