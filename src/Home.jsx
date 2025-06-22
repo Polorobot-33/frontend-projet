@@ -1,64 +1,41 @@
 import Navbar from "./Navbar.jsx";
 
+function Raindrop() {
+  return (
+    <>
+      <div
+        class="animate-fall absolute top-0 h-1 w-0.5 bg-stone-100"
+        style={`left : ${Math.random() * window.innerWidth}px`}
+      />
+    </>
+  );
+}
+
 function createRaindrop() {
-  const boite = document.getElementById("boite");
-  const raindrop = document.createElement("div");
-  raindrop.classList.add("raindrop");
-
-  raindrop.style.left = Math.random() * window.innerWidth + "px";
-
-  const duration = Math.random() * 1 + 0.5;
-  raindrop.style.animationDuration = duration + "s";
-
-  boite.appendChild(raindrop);
-
+  const root = document.getElementById("container");
+  const raindropDiv = Raindrop();
+  root.appendChild(raindropDiv);
   setTimeout(() => {
-    raindrop.remove();
-  }, duration * 1000);
+    raindropDiv.remove();
+  }, 2000);
 }
 
 function launchRaindrop() {
-  const intervalId = setInterval(createRaindrop, 10);
-  setTimeout(() => clearInterval(intervalId), 5000);
+  const droplets = setInterval(createRaindrop, 10);
+  setTimeout(() => clearInterval(droplets), 5000);
 }
 
 function Home() {
   return (
-    <div class="relative h-screen w-full overflow-hidden">
-      <style>
-        {`
-          .raindrop {
-            position: absolute;
-            width: 2px;
-            height: 5px;
-            animation: fall linear infinite;
-            top: -15px;
-            background-color: ivory;
-          }
-          @keyframes fall {
-            from {
-              transform: translateY(0);
-            }
-            to {
-              transform: translateY(110vh);
-            }
-          }
-        `}
-      </style>
-      <div
-        id="boite"
-        class="pointer-events-none fixed inset-0 z-10 overflow-hidden"
-      ></div>
+    <div class="relative h-screen w-screen overflow-hidden" id="container">
       <img
         src="./minesdesel_blanc.png"
         alt="Mines de Sel Logo"
-        class="pointer-events-none mx-auto mb-4 h-100 w-100 object-contain opacity-80 drop-shadow-lg select-none"
+        class="m-auto mb-4 h-100 w-100 opacity-80 drop-shadow-lg"
       />
       <div class="absolute inset-0 flex items-center justify-center">
         <div class="max-w-lg space-y-6 px-4 text-center">
-          <h1 class="text-5xl font-bold text-white">
-            Mines de Sel
-          </h1>
+          <h1 class="text-5xl font-bold text-white">Mines de Sel</h1>
           <p class="text-lg text-white">
             « Cogito ergo Seum » <i>Descartes</i>
           </p>

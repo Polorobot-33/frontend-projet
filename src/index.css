@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* animation for raindroplets */
+@theme {
+  --animate-fall: fall 2s linear forwards;
+
+  @keyframes fall {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(110vh);
+    }
+  }
+}

@@ -28,6 +28,7 @@ render(
         <Route path="/Events" component={Events} />
         <Route path="/Members" component={Members} />
         <Route path="/Contact" component={Contact} />
+        {/* Redirige tous les autres liens vers la page principale */}
         <Route
           path="/*"
           component={() => {
