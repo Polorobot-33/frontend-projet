@@ -59,14 +59,9 @@ function Members() {
         <h1 class="p-4 text-center text-3xl font-bold text-white">
           Voici nos membres les plus illustres
         </h1>
-<<<<<<< HEAD
-        {/* Affiche chacun des membres grâce à la fonction Member */}
-        <div class="flex h-5/6 flex-col justify-around overflow-scroll">
-=======
 
         {/* Display all the members using a for loop */}
         <div class="flex h-5/6 w-full flex-col justify-around items-center overflow-scroll snap-y">
->>>>>>> a79a5a8be25f2bc1998acc423434688c46a69563
           <For each={members_data}>{(elem, i) => <Member data={elem} />}</For>
         </div>
       </div>
