@@ -37,7 +37,7 @@ function Home() {
         <div class="max-w-lg space-y-6 px-4 text-center">
           <h1 class="text-5xl font-bold text-white">Mines de Sel</h1>
           <p class="text-lg text-white">
-            « Le sucre ne sert à rien quand c'est le sel qui manque.»
+            « Cogito ergo Seum » <i>Descartes</i>
           </p>
           <button
             class="relative mx-auto rounded-lg bg-white/10 px-6 py-3 font-semibold text-white [box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.75)] filter backdrop-blur-sm transition duration-300 hover:bg-white/40 dark:[box-shadow:inset_1px_1px_1px_rgba(255,255,255,0.15)]"
