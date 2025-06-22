@@ -1,6 +1,6 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Router, Route, useNavigate, redirect } from "@solidjs/router";
+import { Router, Route, useNavigate } from "@solidjs/router";
 import "./index.css";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
