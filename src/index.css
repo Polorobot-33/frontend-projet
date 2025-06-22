@@ -1,6 +1,7 @@
+/* On utilise tailwind pour le css */
 @import "tailwindcss";
 
-/* animation for raindroplets */
+/* animation pour les gouttes de pluie */
 @theme {
   --animate-fall: fall 2s linear forwards;
 

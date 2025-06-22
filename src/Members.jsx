@@ -65,6 +65,8 @@ function Members() {
           <For each={members_data}>{(elem, i) => <Member data={elem} />}</For>
         </div>
       </div>
+
+      {/* Menu de navigation entre les pages */}
       <Navbar />
     </>
   );
