@@ -15,6 +15,7 @@ function Raindrop() {
 /* Crée une goutte de pluie sur la page, puis la supprime */
 function createRaindrop() {
   const container = document.getElementById("container");
+  // We need to check it in case of a page change.
   if (container != null) {
     // We need an extra container because dispose() revomes all the contents inside a container.
     const dropletContainer = document.createElement("div");
