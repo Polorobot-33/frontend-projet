@@ -1,25 +1,27 @@
 import Navbar from "./Navbar.jsx";
 import logo from "./assets/minesdesel_blanc.png";
+import { render } from "solid-js/web";
 
 /* Balise HTML représentant une goutte de pluie */
 function Raindrop() {
   return (
-    <>
-      <div
-        class="animate-fall absolute top-0 h-1 w-0.5 bg-stone-100"
-        style={`left : ${Math.random() * window.innerWidth}px`}
-      />
-    </>
+    <div
+      class="animate-fall absolute top-0 h-1 w-0.5 bg-stone-100"
+      style={`left : ${Math.random() * window.innerWidth}px`}
+    />
   );
 }
 
 /* Crée une goutte de pluie sur la page, puis la supprime */
 function createRaindrop() {
-  const root = document.getElementById("container");
-  const raindrop = Raindrop();
-  root.appendChild(raindrop);
+  const container = document.getElementById("container");
+  // We need an extra container because dispose() revomes all the contents inside a container.
+  const dropletContainer = document.createElement("div");
+  container.appendChild(dropletContainer);
+  const dispose = render(() => <Raindrop />, dropletContainer);
   setTimeout(() => {
-    raindrop.remove();
+    dispose();
+    container.removeChild(dropletContainer);
   }, 2000);
 }
 
